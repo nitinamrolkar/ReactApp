@@ -1,6 +1,6 @@
 function Sidebar() {
   return (
-   <div className="col bg-danger-subtle">
+   <div className="col bg-danger-subtle shadow-sm p-3  bg-body-tertiary rounded">
        <div style={{
       width: "200px",
       height: "100vh",
