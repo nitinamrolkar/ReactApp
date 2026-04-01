@@ -30,7 +30,7 @@ import { createRoot } from 'react-dom/client'
                     <div style={{padding: "20px", width: "100%"}}>
                       <Dashboard />
                       
-                      <NewForm  />
+                      <Test  />
                     </div>
 
                   </div>
@@ -45,28 +45,20 @@ import { createRoot } from 'react-dom/client'
    
   );
 }
-
-
-function NewForm(){
-
-  const [text, setText] = useState("");
-
-  function nitin(e){
-    setText(e.target.value);
+function Test() {
+  const[value, setValue] = useState(100);
+  function handleChnage()
+  {
+      const total = value -1;
+      setValue(total);
   }
+    return(
+      <div>
+        <h1>Strting Value is {value}</h1>
+        <button onClick={handleChnage}>Decrease value</button>
+      </div>
+    );
 
-  function actionFun(e){
-     e.preventDefault();
-      alert(text); 
   }
-
-  return (
-    <form onSubmit={actionFun}>
-      <label htmlFor=""> type your text</label>
-      <textarea value={text} onChange={nitin}></textarea>
-      <input type="submit" name="" id="" />
-    </form>
-  );
-}
 
 export default App;
